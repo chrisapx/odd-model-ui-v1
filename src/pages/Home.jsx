@@ -88,8 +88,9 @@ const Home = () => {
           onClick={handleUpload}
           disabled={!selectedFile || isUploading}
           className={`mt-4 px-4 py-2 rounded-lg ${
-            selectedFile && !isUploading ? "bg-blue-600 text-white" : "bg-gray-300 text-gray-500 cursor-not-allowed"
+            selectedFile && !isUploading ? "bg-orange-600 text-white" : "bg-orange-100 text-gray-500 cursor-not-allowed"
           }`}
+          title={!selectedFile ? "Please select a file" : ""}
         >
           {isUploading ? "Uploading..." : "Upload & Generate"}
         </button>
@@ -122,8 +123,8 @@ const Home = () => {
         className="w-full md:w-[33vw] p-0"
         content={({ hide }) => (
           <div className="p-5 h-[100vh] overflow-y-auto">
-            <section className='border-b flex justify-between items-center sticky -top-5 bg-white z-10'>
-              <h2 className="text-xl font-bold">Record Details</h2>
+            <section className='flex justify-between items-center sticky -top-5 bg-white z-10'>
+              <h2 className="text-xl font-bold text-orange-600">Feedback details</h2>
               <i className="pi pi-times" onClick={() => hide()}/>
             </section>
             
