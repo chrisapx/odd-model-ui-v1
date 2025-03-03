@@ -1,16 +1,19 @@
 ![alt text](public/favicons/favicon.ico)
 
-# DATASET GENERATOR | Ai Powered image dataset generator
+# ORANGE DISEASE DETECTION ENGINE | Ai Powered orange disease detector
 
-## Generative AI image dataset generator UI
+## Predictive AI Orange disease detector
 
 ## _*How it works*_
 
-## Upload a **ZIP file** with images, and our AI will generate enhanced images for you to supliment your existing insuficient dataset pool. Once done, download the processed ZIP file.
+## Upload a an infected orange image, and our AI engine will analyse the disease affecting the fruit and offer feedback based on the pretrained data.
 
 ## Demo
 ### Initial view
-![alt text](image.png)
+![alt text](image-2.png)
 
 ### After selection
-![alt text](image-1.png)
+![alt text](image-3.png)
+
+### Feeback section
+![alt text](image-4.png)

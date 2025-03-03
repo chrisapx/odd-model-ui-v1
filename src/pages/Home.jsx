@@ -48,6 +48,10 @@ const Home = () => {
     setSearchParams(searchParams);
   };
 
+  const diseaseData = {
+    name: "Citrus greening",
+    description: "Citrus greening, also known as Huanglongbing (HLB), is a devastating disease of citrus caused by the bacterium Candidatus Liberibacter asiaticus. It is one of the most serious citrus plant diseases in the world."
+  }; 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center">
       <nav className="w-full flex justify-between items-center px-[8vw] bg-orange-100 border-b">
@@ -125,7 +129,26 @@ const Home = () => {
           <div className="p-5 h-[100vh] overflow-y-auto">
             <section className='flex justify-between items-center sticky -top-5 bg-white z-10'>
               <h2 className="text-xl font-bold text-orange-600">Feedback details</h2>
-              <i className="pi pi-times" onClick={() => hide()}/>
+              <i className="pi pi-times text-orange-600" onClick={() => hide()}/>
+            </section>
+
+            <section className="mt-4">
+              <h3 className="text-lg font-bold text-orange-600">Image uploaded</h3>
+              <img src="images/orange-fruit.png" alt="Orange fruit" className="w-full" />
+            </section>
+
+            <section className="mt-4">
+              <h3 className="text-lg font-bold text-orange-600">Disease detected</h3>
+              <p className="text-gray-600">Citrus greening</p>
+            </section>
+
+            <section>
+              <pre>
+                { 
+                  'name: "Citrus greening",'
+                  + 'description: "Citrus greening, also known as Huanglongbing (HLB), is a devastating disease of citrus caused by the bacterium Candidatus Liberibacter asiaticus. Citrus greening is one of the most serious citrus plant diseases in the world. It is also known as Huanglongbing (HLB) or yellow shoot disease. The disease'
+                }"
+              </pre>
             </section>
             
           </div>

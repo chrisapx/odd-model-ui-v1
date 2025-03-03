@@ -1,0 +1,34 @@
+from google.colab import files
+from tensorflow.keras.preprocessing import image
+import numpy as np
+
+
+class_labels = ["Citrus Canker", "Healthy", "Melanose"]
+
+# Upload image
+uploaded = files.upload()
+
+
+
+
+# Get the first uploaded image filename
+image_path = list(uploaded.keys())[0]
+
+# Load and preprocess the image
+img = image.load_img(image_path, target_size=(224, 224))  # Adjust size based on your model input
+img_array = image.img_to_array(img)
+img_array = np.expand_dims(img_array, axis=0)
+img_array /= 255.0  # Normalize if your model requires it
+
+print("Image processed successfully!")
+
+# Make prediction
+predictions = model.predict(img_array)
+
+# Get the index of the highest probability
+predicted_index = np.argmax(predictions, axis=1)[0]
+
+# Get the class name
+predicted_class = class_labels[predicted_index]
+
+print(f"Predicted class: {predicted_class}")
